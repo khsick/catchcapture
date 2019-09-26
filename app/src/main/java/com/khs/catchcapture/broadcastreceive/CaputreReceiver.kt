@@ -1,4 +1,4 @@
-package com.abangfadli.shotwatchapp.broadcastreceive
+package com.khs.catchcapture.broadcastreceive
 
 import android.app.Activity
 import android.content.BroadcastReceiver
@@ -6,8 +6,8 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.util.Log
-import com.abangfadli.shotwatchapp.View.MainActivity
-import com.abangfadli.shotwatchapp.service.CaputreService
+
+import com.khs.catchcapture.service.CaputreService
 
 class CaputreReceiver : BroadcastReceiver() {
 

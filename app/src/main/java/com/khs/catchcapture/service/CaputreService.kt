@@ -1,4 +1,4 @@
-package com.abangfadli.shotwatchapp.service
+package com.khs.catchcapture.service
 
 import android.app.*
 import android.content.ContentResolver
@@ -9,18 +9,18 @@ import androidx.core.app.NotificationCompat
 import android.content.Context
 import android.os.Build
 import android.widget.Toast
-import com.abangfadli.shotwatchapp.broadcastreceive.CaputreReceiver
-import com.abangfadli.shotwatchapp.View.ImageEditTest
-import com.abangfadli.shotwatchapp.R
-import com.abangfadli.shotwatchapp.View.MainActivity
-import com.abangfadli.shotwatchapp.util.FileUtils
+
 import com.akexorcist.screenshotdetection.ScreenshotDetectionDelegate
 
 import iamutkarshtiwari.github.io.ananas.editimage.ImageEditorIntentBuilder
 import java.io.File
 import java.lang.Exception
 import java.util.*
-import com.abangfadli.shotwatchapp.View.MainActivity.mContext
+
+import com.khs.catchcapture.R
+import com.khs.catchcapture.View.MainActivity
+import com.khs.catchcapture.broadcastreceive.CaputreReceiver
+import com.khs.catchcapture.util.FileUtils
 import iamutkarshtiwari.github.io.ananas.editimage.EditImageActivity
 import iamutkarshtiwari.github.io.ananas.editimage.EditImageActivity.ctx
 

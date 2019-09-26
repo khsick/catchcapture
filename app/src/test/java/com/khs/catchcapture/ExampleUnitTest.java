@@ -1,4 +1,4 @@
-package com.abangfadli.shotwatchapp;
+package com.khs.catchcapture;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.abangfadli.shotwatchapp.View
+package com.khs.catchcapture.View
 
 import android.content.Intent
 import android.graphics.Typeface
@@ -10,11 +10,9 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.recyclerview.widget.RecyclerView
-import com.abangfadli.shotwatchapp.*
-import com.abangfadli.shotwatchapp.base.BaseActivity
-import com.abangfadli.shotwatchapp.filters.FilterListener
-import com.abangfadli.shotwatchapp.util.FileUtils
 import com.bumptech.glide.Glide
+import com.khs.catchcapture.BaseActivity
+import com.khs.catchcapture.filters.FilterListener
 import iamutkarshtiwari.github.io.ananas.editimage.EditImageActivity
 import iamutkarshtiwari.github.io.ananas.editimage.ImageEditorIntentBuilder
 
@@ -22,7 +20,7 @@ import kotlinx.android.synthetic.main.activity_image_edit_test.*
 import java.lang.Exception
 
 
-class ImageEditTest : BaseActivity(), View.OnClickListener,FilterListener {
+class ImageEditTest : BaseActivity(), View.OnClickListener, FilterListener {
 
     private val PHOTO_EDITOR_REQUEST_CODE = 231// Any integer value as a request code.
     val ACTION_REQUEST_EDITIMAGE = 9

@@ -1,4 +1,4 @@
-package com.abangfadli.shotwatchapp.base
+package com.khs.catchcapture
 
 import android.app.ProgressDialog
 import android.content.pm.PackageManager

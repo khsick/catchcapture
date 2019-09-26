@@ -6,7 +6,7 @@ android {
     compileSdkVersion 28
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.abangfadli.shotwatchapp"
+        applicationId "com.khs.catchcapture"
         minSdkVersion 16
         targetSdkVersion 25
         versionCode 1

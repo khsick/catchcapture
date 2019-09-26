@@ -1,4 +1,4 @@
-package com.abangfadli.shotwatchapp;
+package com.khs.catchcapture;
 
 import android.content.Context;
 import androidx.test.platform.app.InstrumentationRegistry;

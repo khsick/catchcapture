@@ -1,4 +1,4 @@
-package com.abangfadli.shotwatchapp.View;
+package com.khs.catchcapture.View;
 
 import android.Manifest;
 import android.app.Activity;
@@ -22,9 +22,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.abangfadli.shotwatchapp.service.CaputreService;
-import com.abangfadli.shotwatchapp.R;
-import com.abangfadli.shotwatchapp.util.FileUtils;
+import com.khs.catchcapture.service.CaputreService;
+import com.khs.catchcapture.R;
+import com.khs.catchcapture.util.FileUtils;
 import com.akexorcist.screenshotdetection.ScreenshotDetectionDelegate;
 
 import java.io.File;

@@ -22,8 +22,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.abangfadli.shotwatch.ScreenshotData;
-import com.abangfadli.shotwatch.ShotWatch;
 import com.abangfadli.shotwatchapp.service.CaputreService;
 import com.abangfadli.shotwatchapp.R;
 import com.abangfadli.shotwatchapp.util.FileUtils;
@@ -39,8 +37,6 @@ import iamutkarshtiwari.github.io.ananas.editimage.ImageEditorIntentBuilder;
 
 
 public class MainActivity extends AppCompatActivity {
-
-    public static ShotWatch mShotWatch;
 
     public static TextView mText;
     public static  ImageView mImage;
@@ -71,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        capture();
 
             if (null == CaputreService.Companion.getServiceIntent()) {
                 intent = new Intent(this, CaputreService.class);
@@ -98,22 +93,6 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
-
-
-
-    public void capture(){
-
-        Log.i("khs","capture() 이값이오는가");
-
-        mShotWatch = new ShotWatch(contentResolver, new ShotWatch.Listener() {
-            @Override
-            public void onScreenShotTaken(ScreenshotData screenshotData) {
-              //  mText.setText(screenshotData.getFileName());
-                Uri uri = Uri.parse(screenshotData.getPath());
-             //   mImage.setImageURI(uri);
-            }
-        });
-    }
 
     protected void checkPermissions() {
         final List<String> missingPermissions = new ArrayList<String>();

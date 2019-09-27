@@ -1,21 +1,18 @@
 package com.khs.catchcapture.View;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import android.util.Log;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -24,16 +21,11 @@ import android.widget.Toast;
 
 import com.khs.catchcapture.service.CaputreService;
 import com.khs.catchcapture.R;
-import com.khs.catchcapture.util.FileUtils;
 import com.akexorcist.screenshotdetection.ScreenshotDetectionDelegate;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import iamutkarshtiwari.github.io.ananas.editimage.EditImageActivity;
-import iamutkarshtiwari.github.io.ananas.editimage.ImageEditorIntentBuilder;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -52,21 +44,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         //권한요청
-
         checkPermissions();
-
         Button button = findViewById(R.id.end_button);
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                finish();
-
-            }
-        });
+        button.setOnClickListener(view -> finish());
 
             if (null == CaputreService.Companion.getServiceIntent()) {
                 intent = new Intent(this, CaputreService.class);
@@ -76,14 +57,11 @@ public class MainActivity extends AppCompatActivity {
                 intent = CaputreService.Companion.getServiceIntent();
                 //  Toast.makeText(getApplicationContext(), "already", Toast.LENGTH_LONG).show();
             }
-
-
     }
 
 
     @Override
     protected void onDestroy() {
-
 
         if (null != intent) {
             stopService(intent);
@@ -136,17 +114,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
     @Override
     protected void onResume() {
         super.onResume();
-      //  mShotWatch.register();
-    }
 
+    }
     @Override
     protected void onPause() {
         super.onPause();
 
     }
-
 }

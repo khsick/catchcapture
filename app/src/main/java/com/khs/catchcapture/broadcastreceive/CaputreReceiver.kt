@@ -14,8 +14,6 @@ class CaputreReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         // This method is called when the BroadcastReceiver is receiving an Intent broadcast.
 
-
-
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
                 var intent = Intent(context, CaputreService::class.java)

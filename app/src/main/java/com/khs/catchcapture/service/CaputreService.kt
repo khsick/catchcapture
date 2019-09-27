@@ -29,13 +29,7 @@ class CaputreService : Service(),ScreenshotDetectionDelegate.ScreenshotDetection
     var screenshotDetectionDelegate = ScreenshotDetectionDelegate(this, this)
 
     override fun onScreenCaptured(path: String?) {
-/*
-        var intent =  Intent(this, ImageEditTest::class.java)
 
-        intent.putExtra("url_path",path)
-        intent.putExtra("is_open",true)
-
-*/
         var outputFile = FileUtils.genEditFile()
   /*
         try {
@@ -105,8 +99,7 @@ class CaputreService : Service(),ScreenshotDetectionDelegate.ScreenshotDetection
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
 
         contentResolver
-
-        Log.i("khs","service 시작")
+       Log.i("khs","service 시작")
         serviceIntent = intent
         initializeNotification()
         //Toast.makeText(applicationContext,"service 시작",Toast.LENGTH_LONG).show()
@@ -171,7 +164,6 @@ class CaputreService : Service(),ScreenshotDetectionDelegate.ScreenshotDetection
 
     override fun onDestroy() {
         super.onDestroy()
-
 
             var intent = Intent(this, CaputreReceiver::class.java)
             var sender = PendingIntent.getBroadcast(this, 0, intent, 0)
